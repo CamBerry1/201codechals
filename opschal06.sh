@@ -10,9 +10,15 @@
 #                           Loop
 #                           Conditional
 
+# Define arrays
+
 dir_array=("mydir" "newdir" "dirdir")
 
 file_array=(my.txt new.sh)
+
+# Main
+
+# For loop
 
 for dir in ${dir_array[*]}
 do
@@ -25,3 +31,5 @@ do
         touch ${dir_array[1]}/${file_array[1]}
     fi
 done
+
+# End
