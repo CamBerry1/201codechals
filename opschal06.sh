@@ -10,11 +10,9 @@
 #                           Loop
 #                           Conditional
 
-# Define arrays
+# Define array
 
 dir_array=("mydir" "newdir" "dirdir")
-
-file_array=(my.txt new.sh)
 
 # Main
 
@@ -27,8 +25,6 @@ do
         break
     else
         mkdir "$dir"
-        touch ${dir_array[0]}/${file_array[0]}
-        touch ${dir_array[1]}/${file_array[1]}
     fi
 done
 
