@@ -12,6 +12,8 @@
 
 dir_array=("mydir" "newdir" "dirdir")
 
+file_array=(my.txt new.sh)
+
 for dir in ${dir_array[*]}
 do
     if [ -d $dir ]; then
@@ -19,5 +21,7 @@ do
         break
     else
         mkdir "$dir"
+        touch ${dir_array[0]}/${file_array[0]}
+        touch ${dir_array[1]}/${file_array[1]}
     fi
 done
