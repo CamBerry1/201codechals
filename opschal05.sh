@@ -13,7 +13,7 @@
 echo "Type PROCESS to display running processes"
 read input
 
-while [ $input != "PROCESS" ]; do
+while [[ $input != "PROCESS" ]]; do
     echo "Not a valid input"
     echo "Press Enter to display running processes"
     read input
@@ -26,8 +26,19 @@ ps aux
 echo "Enter PID to kill specified process"
 read pid
 
-kill $pid
-
-echo "Process #$pid has been terminated"
-
+if [[ ps -p $pid >/dev/null ]]
+then   
+    echo "$pid is running"
+    echo " Are you sure you want to kill? Type 'y' to continue"
+    read y
+    if $y == "y"
+        then
+        kill $pid
+        echo "$pid has been terminated"
+        else
+        echo "$pid is still running"
+    fi
+else
+    echo "$pid is not running"
+fi
 # End
