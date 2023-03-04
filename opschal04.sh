@@ -10,17 +10,18 @@
 
 # Main
 
-mkdir dir1
-mkdir dir2
-mkdir dir3
-mkdir dir4
-
 dir_array=(dir1 dir2 dir3 dir4)
 
-touch ${dir_array[0]}/new.txt
-touch ${dir_array[1]}/new.txt
-touch ${dir_array[2]}/new.txt
-touch ${dir_array[3]}/new.txt
+mkdir ${dir_array[*]}
+
+# touch ${dir_array[0]}/new.txt
+# touch ${dir_array[1]}/new.txt
+# touch ${dir_array[2]}/new.txt
+# touch ${dir_array[3]}/new.txt
+
+# ^ these are the same v
+
+touch ${dir_array[0]}/new.txt ${dir_array[1]}/new.txt ${dir_array[2]}/new.txt ${dir_array[3]}/new.txt
 
 # I don't like having 4 mkdirs and 4 touches.
 # I feel like there's a cleaner way to write this but I'm too brain dead right now.
