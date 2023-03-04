@@ -8,7 +8,11 @@
 
 # Main
 
+# Delcare variables
+
 explain="Here is a list of all past user logins"
+
+# Declare functions
 
 username (){
     echo "Please type your name"
@@ -25,6 +29,8 @@ loghist (){
 filename (){
     echo "'The code challenge filename is $0'"
 }
+
+# Declare functions
 
 username
 loghist
