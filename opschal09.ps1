@@ -52,5 +52,6 @@ recent20
 echo "Listed Below Are The Soures Of The 500 Most Recent System Events"
 Pause
 recent500sources
+Pause
 
 # End
