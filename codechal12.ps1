@@ -8,7 +8,7 @@
 
 # Declare variables
 
-$netrep = "C:\Users\admin\Documents\network_report.txt"
+$netrep = "$env:HOMEPATH\Documents\network_report.txt"
 
 # Declare functions
 
