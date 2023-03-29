@@ -21,6 +21,7 @@ domainlookup () {
     # My variable didn't work when it was in line 16
     outputfile="${input}_info.txt"
     whois $input > $outputfile
+    # grep takes only the answer section of the dig output
     dig $input | grep -A1 "ANSWER SECTION" >> $outputfile
     host $input >> $outputfile
     nslookup $input >> $outputfile
